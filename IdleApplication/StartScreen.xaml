@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="IdleApplication.StartScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="517" Height="329">
+    <Grid x:Name="MainGrid" HorizontalAlignment="Left" Height="329" VerticalAlignment="Top" Width="517" Margin="0,-10,-217,-19">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF4B422E" Offset="0.862"/>
+                <GradientStop Color="#FFFF9700"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="IDLE GAME" HorizontalAlignment="Left" Margin="86,37,0,0" VerticalAlignment="Top" FontSize="72"/>
+        <Image HorizontalAlignment="Left" Height="23" Margin="117,180,0,0" VerticalAlignment="Top" Width="23" Source="Resources/Logo.png" RenderTransformOrigin="0.5,0.5">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/Idle_Logo.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="23" Margin="117,219,0,0" VerticalAlignment="Top" Width="23" Source="Resources/Logo.png" RenderTransformOrigin="0.5,0.5">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/Idle_Logo.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_NewGame" Content="New Game" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="221" FontSize="16" Cursor="Hand" Focusable="False" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF443B3B" IsHitTestVisible="True" Margin="145,176,0,0" Background="#FFE8924B" Click="btn_NewGame_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btn_load" Content="Load" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="221" FontSize="16" Cursor="Hand" Focusable="False" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF443B3B" IsHitTestVisible="True" Margin="145,215,0,0" Background="#FFE8924B">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</UserControl>
